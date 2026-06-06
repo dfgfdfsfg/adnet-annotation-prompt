@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ADNet structured anomaly annotation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "location",
+    "color",
+    "shape",
+    "area_size",
+    "quantity",
+    "reason"
+  ],
+  "properties": {
+    "location": {
+      "type": "string",
+      "description": "Approximate anomaly location in the image, or unknown if evidence is insufficient."
+    },
+    "color": {
+      "type": "string",
+      "description": "Salient visible color or appearance cue, or unknown if evidence is insufficient."
+    },
+    "shape": {
+      "type": "string",
+      "description": "Visible geometric or morphological description, or unknown if evidence is insufficient."
+    },
+    "area_size": {
+      "type": "string",
+      "description": "Relative or physical size of the anomalous region, or unknown if evidence is insufficient."
+    },
+    "quantity": {
+      "type": "string",
+      "description": "Number of anomaly instances when visible, or unknown if evidence is insufficient."
+    },
+    "reason": {
+      "type": "string",
+      "description": "Visible or strongly supported cause; use unknown when the cause is not visually supported."
+    }
+  }
+}
